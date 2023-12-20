@@ -59,7 +59,9 @@
             // 
             // textBoxWins
             // 
+            this.textBoxWins.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.textBoxWins.Enabled = false;
+            this.textBoxWins.ForeColor = System.Drawing.Color.FloralWhite;
             this.textBoxWins.Location = new System.Drawing.Point(138, 138);
             this.textBoxWins.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.textBoxWins.Name = "textBoxWins";
@@ -69,7 +71,9 @@
             // 
             // textBoxTies
             // 
+            this.textBoxTies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.textBoxTies.Enabled = false;
+            this.textBoxTies.ForeColor = System.Drawing.Color.FloralWhite;
             this.textBoxTies.Location = new System.Drawing.Point(138, 204);
             this.textBoxTies.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.textBoxTies.Name = "textBoxTies";
@@ -79,7 +83,9 @@
             // 
             // textBoxLosses
             // 
+            this.textBoxLosses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.textBoxLosses.Enabled = false;
+            this.textBoxLosses.ForeColor = System.Drawing.Color.FloralWhite;
             this.textBoxLosses.Location = new System.Drawing.Point(138, 171);
             this.textBoxLosses.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.textBoxLosses.Name = "textBoxLosses";
@@ -101,7 +107,9 @@
             // 
             // textBoxRanking
             // 
+            this.textBoxRanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.textBoxRanking.Enabled = false;
+            this.textBoxRanking.ForeColor = System.Drawing.Color.FloralWhite;
             this.textBoxRanking.Location = new System.Drawing.Point(138, 72);
             this.textBoxRanking.Margin = new System.Windows.Forms.Padding(10, 10, 10, 5);
             this.textBoxRanking.Name = "textBoxRanking";
@@ -162,7 +170,9 @@
             // 
             // textBoxRatio
             // 
+            this.textBoxRatio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.textBoxRatio.Enabled = false;
+            this.textBoxRatio.ForeColor = System.Drawing.Color.FloralWhite;
             this.textBoxRatio.Location = new System.Drawing.Point(138, 105);
             this.textBoxRatio.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.textBoxRatio.Name = "textBoxRatio";

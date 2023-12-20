@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace WinOxo
 {
+    /// <summary>
+    /// Handles game mode selection
+    /// </summary>
     public partial class FormMode : Form
     {
         private FormLogin formLogin;
@@ -28,6 +31,7 @@ namespace WinOxo
 
         private void buttonSinglePlayer_Click(object sender, EventArgs e)
         {
+            // Launch game with the virtual opponent
             FormGame formGame = new FormGame(formLogin, userId, login, true);
             openGameWindow = true;
             this.Close();
@@ -36,6 +40,7 @@ namespace WinOxo
 
         private void buttonTwoPlayers_Click(object sender, EventArgs e)
         {
+            // Launch game for 2 human players
             FormGame formGame = new FormGame(formLogin, userId, login, false);
             openGameWindow = true;
             this.Close();
@@ -45,8 +50,6 @@ namespace WinOxo
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            //formLogin.ClearForm();
-            //formLogin.Show();
         }
 
         private void FormMode_FormClosing(Object sender, FormClosingEventArgs e)

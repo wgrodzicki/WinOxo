@@ -141,13 +141,12 @@ namespace WinOxo
                 // Login not found in the database
                 if (usersLoginData.Tables["Users"].Rows.Count == 0)
                 {
-                    //!!
+                    // Login too long
                     if (login.Length > 8)
                     {
                         loginWarning.Text = "Max. 8 characters";
                         return 0;
                     }
-                    //!!
                     return -1;
                 }
                 // Login found
@@ -278,15 +277,9 @@ namespace WinOxo
             // Log in if both login and password valid
             if (userId > 0 && passwordValid)
             {
-                //!!
                 FormMode formMode = new FormMode(this, userId, textBoxLogin.Text);
                 this.Hide();
                 formMode.Show();
-
-                //FormGame formGame = new FormGame(this, userId, textBoxLogin.Text);
-                //this.Hide();
-                //formGame.Show();
-                //!!
             }
         }
 
@@ -307,18 +300,14 @@ namespace WinOxo
             PlayWithoutAccount();
         }
 
+        /// <summary>
+        /// Handles game access without logging in
+        /// </summary>
         private void PlayWithoutAccount()
         {
-            //!!
             FormMode formMode = new FormMode(this, 0, "");
             this.Hide();
             formMode.Show();
-
-
-            //FormGame formGame = new FormGame(this, 0, "");
-            //this.Hide();
-            //formGame.Show();
-            //!!
         }
 
         private void buttonClose_Click(object sender, EventArgs e)

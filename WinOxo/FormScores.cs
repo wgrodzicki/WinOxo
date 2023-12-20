@@ -12,7 +12,7 @@ using System.Windows.Forms;
 namespace WinOxo
 {
     /// <summary>
-    /// Handles the display of the player's scores
+    /// Handles the display of player's scores
     /// </summary>
     public partial class FormScores : Form
     {

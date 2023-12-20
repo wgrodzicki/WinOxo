@@ -57,23 +57,23 @@ namespace WinOxo
             buttonPlayer1.FlatAppearance.BorderColor = this.BackColor;
             buttonPlayer2.FlatAppearance.BorderColor = this.BackColor;
 
-            //!!
             if (singlePlayerMode)
             {
                 ticTacToeBoardGame.SinglePlayer = true;
                 buttonPlayer2.Text = "AI player";
+                // Save initial timer interval
                 initialTimerInterval = ticTacToeBoardGame.timerVirtualOpponent.Interval;
             }
 
+            // With account
             if (userId > 0)
             {
                 buttonPlayer1.Text = login;
             }
+            // Without account
             else
             {
-                //!!
                 buttonPlayer1.Text = "You";
-                //!!
                 buttonScores.Visible = false;
                 buttonSignOutBack.Text = "Back";
             }
@@ -103,7 +103,7 @@ namespace WinOxo
             textBoxPlayer1.Enabled = false;
             textBoxPlayer2.Enabled = false;
 
-            buttonPlaceholder.Focus();
+            buttonPlaceholder.Focus(); // Make sure there is no visible focus when starting the game
         }
 
         private void buttonScores_Click(object sender, EventArgs e)
@@ -143,25 +143,25 @@ namespace WinOxo
                 buttonPlayer1.Font = new Font(buttonPlayer1font, FontStyle.Regular);
                 buttonPlayer1.ForeColor = buttonPlayerInactiveColor;
 
-                //!!
                 if (ticTacToeBoardGame.SinglePlayer)
                 {
                     VirtualOpponent();
                 }
-                //!!
             }
         }
 
-        //!!
+        /// <summary>
+        /// Represents an action taken by the virtual opponent
+        /// </summary>
         private void VirtualOpponent()
         {
-            //ticTacToeBoardGame.Enabled = false;
+            // Randomize wait time
             var random = new Random();
             int intervalModifier = random.Next(1, 3);
             ticTacToeBoardGame.timerVirtualOpponent.Interval = initialTimerInterval * intervalModifier;
+
             ticTacToeBoardGame.timerVirtualOpponent.Start();
         }
-        //!!
 
         /// <summary>
         /// Handles the end of the game; called when the game is finished
@@ -302,16 +302,12 @@ namespace WinOxo
         private void buttonSignOutBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            //formLogin.ClearForm();
-            //formLogin.Show();
         }
 
         private void FormGame_FormClosing(Object sender, FormClosingEventArgs e)
         {
             FormMode formMode = new FormMode(formLogin, userId, login);
             formMode.Show();
-            //formLogin.ClearForm();
-            //formLogin.Show();
         }
     }
 }

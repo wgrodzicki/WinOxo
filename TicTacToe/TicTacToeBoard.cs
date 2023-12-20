@@ -24,9 +24,7 @@ namespace TicTacToe
 
         private int currentPlayer = 0;
         private int winner = 0;
-        //!!
         private bool singlePlayer = false;
-        //!!
 
         private string playerSymbol1 = "X";
         private string playerSymbol2 = "O";
@@ -70,13 +68,11 @@ namespace TicTacToe
             get { return winner; }
         }
 
-        //!!
         public bool SinglePlayer
         {
             get { return singlePlayer; }
             set { singlePlayer = value; }
         }
-        //!!
 
         public string PlayerSymbol1
         {
@@ -162,112 +158,92 @@ namespace TicTacToe
                 gameFields[i].PopulateAdjacentFields(gameFields);
             }
 
-            //!!
             if (!singlePlayer)
             {
                 timerVirtualOpponent.Enabled = false;
             }
-            //!!
 
             this.Enabled = false;
         }
 
         private void field0_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field0, currentPlayer);
         }
 
         private void field1_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field1, currentPlayer);
         }
 
         private void field2_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field2, currentPlayer);
         }
 
         private void field3_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field3, currentPlayer);
         }
 
         private void field4_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field4, currentPlayer);
         }
 
         private void field5_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field5, currentPlayer);
         }
 
         private void field6_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field6, currentPlayer);
         }
 
         private void field7_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field7, currentPlayer);
         }
 
         private void field8_Click(object sender, EventArgs e)
         {
-            //!!
             if (singlePlayer && currentPlayer == 2)
             {
                 return;
             }
-            //!!
             OnFieldClicked(field8, currentPlayer);
         }
         
@@ -312,7 +288,7 @@ namespace TicTacToe
         }
 
         /// <summary>
-        /// Changes field's state according to which player has made the action
+        /// Changes field's state according to which player has taken the action
         /// </summary>
         /// <param name="button"></param>
         /// <param name="currentPlayer"></param>
@@ -489,7 +465,6 @@ namespace TicTacToe
             playerChanged?.Invoke(currentPlayer);
         }
 
-        //!!
         private void timerVirtualOpponent_Tick(object sender, EventArgs e)
         {
             timerVirtualOpponent.Stop();
@@ -502,18 +477,16 @@ namespace TicTacToe
                 {
                     continue;
                 }
-
+                // Get all empty fields
                 emptyFields.Add(field);
             }
 
+            // Choose one of the empty fields at random
             var random = new Random();
             int chosenField = random.Next(0, emptyFields.Count);
 
             OnFieldClicked(emptyFields[chosenField].FieldButton, currentPlayer);
-            //this.Enabled = true;
-
         }
-        //!!
 
         /// <summary>
         /// Represents a single field on the game board
