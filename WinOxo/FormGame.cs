@@ -19,6 +19,7 @@ namespace WinOxo
         private FormLogin formLogin;
         private int userId = 0;
         private string login = "";
+        private bool singlePlayerMode = false;
 
         private SqlConnection connection;
 
@@ -27,12 +28,15 @@ namespace WinOxo
         private Color buttonPlayerActiveColor;
         private Color buttonPlayerInactiveColor = Color.Black;
 
-        public FormGame(FormLogin formLogin, int userId, string login)
+        private int initialTimerInterval = 0;
+
+        public FormGame(FormLogin formLogin, int userId, string login, bool singlePlayerMode)
         {
             InitializeComponent();
             this.formLogin = formLogin; // Get access to the login form
             this.userId = userId;
             this.login = login;
+            this.singlePlayerMode = singlePlayerMode;
             this.FormClosing += FormGame_FormClosing; // Make sure the whole app closes when this form is closed
         }
 
@@ -53,12 +57,23 @@ namespace WinOxo
             buttonPlayer1.FlatAppearance.BorderColor = this.BackColor;
             buttonPlayer2.FlatAppearance.BorderColor = this.BackColor;
 
+            //!!
+            if (singlePlayerMode)
+            {
+                ticTacToeBoardGame.SinglePlayer = true;
+                buttonPlayer2.Text = "AI player";
+                initialTimerInterval = ticTacToeBoardGame.timerVirtualOpponent.Interval;
+            }
+
             if (userId > 0)
             {
                 buttonPlayer1.Text = login;
             }
             else
             {
+                //!!
+                buttonPlayer1.Text = "You";
+                //!!
                 buttonScores.Visible = false;
                 buttonSignOutBack.Text = "Back";
             }
@@ -115,7 +130,7 @@ namespace WinOxo
         {
             if (currentPlayer == 1)
             {
-                buttonPlayer1.Font = new Font(buttonPlayer1font, FontStyle.Underline | FontStyle.Bold);
+                buttonPlayer1.Font = new Font(buttonPlayer1font, FontStyle.Bold);
                 buttonPlayer1.ForeColor = buttonPlayerActiveColor;
                 buttonPlayer2.Font = new Font(buttonPlayer2font, FontStyle.Regular);
                 buttonPlayer2.ForeColor = buttonPlayerInactiveColor;
@@ -123,12 +138,30 @@ namespace WinOxo
 
             if (currentPlayer == 2)
             {
-                buttonPlayer2.Font = new Font(buttonPlayer2.Font, FontStyle.Underline | FontStyle.Bold);
+                buttonPlayer2.Font = new Font(buttonPlayer2.Font, FontStyle.Bold);
                 buttonPlayer2.ForeColor = buttonPlayerActiveColor;
                 buttonPlayer1.Font = new Font(buttonPlayer1font, FontStyle.Regular);
                 buttonPlayer1.ForeColor = buttonPlayerInactiveColor;
+
+                //!!
+                if (ticTacToeBoardGame.SinglePlayer)
+                {
+                    VirtualOpponent();
+                }
+                //!!
             }
         }
+
+        //!!
+        private void VirtualOpponent()
+        {
+            //ticTacToeBoardGame.Enabled = false;
+            var random = new Random();
+            int intervalModifier = random.Next(1, 3);
+            ticTacToeBoardGame.timerVirtualOpponent.Interval = initialTimerInterval * intervalModifier;
+            ticTacToeBoardGame.timerVirtualOpponent.Start();
+        }
+        //!!
 
         /// <summary>
         /// Handles the end of the game; called when the game is finished
@@ -269,14 +302,16 @@ namespace WinOxo
         private void buttonSignOutBack_Click(object sender, EventArgs e)
         {
             this.Close();
-            formLogin.ClearForm();
-            formLogin.Show();
+            //formLogin.ClearForm();
+            //formLogin.Show();
         }
 
         private void FormGame_FormClosing(Object sender, FormClosingEventArgs e)
         {
-            formLogin.ClearForm();
-            formLogin.Show();
+            FormMode formMode = new FormMode(formLogin, userId, login);
+            formMode.Show();
+            //formLogin.ClearForm();
+            //formLogin.Show();
         }
     }
 }

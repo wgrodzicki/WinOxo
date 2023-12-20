@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.buttonPlayer1 = new System.Windows.Forms.Button();
             this.buttonPlayer2 = new System.Windows.Forms.Button();
             this.buttonStart = new System.Windows.Forms.Button();
@@ -48,13 +49,15 @@
             this.buttonPlayer1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.buttonPlayer1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.buttonPlayer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlayer1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPlayer1.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonPlayer1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.buttonPlayer1.Location = new System.Drawing.Point(12, 22);
+            this.buttonPlayer1.Location = new System.Drawing.Point(1, 22);
+            this.buttonPlayer1.Margin = new System.Windows.Forms.Padding(0, 3, 3, 3);
             this.buttonPlayer1.Name = "buttonPlayer1";
-            this.buttonPlayer1.Size = new System.Drawing.Size(100, 45);
+            this.buttonPlayer1.Size = new System.Drawing.Size(110, 45);
             this.buttonPlayer1.TabIndex = 1;
             this.buttonPlayer1.Text = "Player 1";
+            this.buttonPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonPlayer1.UseVisualStyleBackColor = false;
             // 
             // buttonPlayer2
@@ -64,13 +67,15 @@
             this.buttonPlayer2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.buttonPlayer2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.buttonPlayer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlayer2.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonPlayer2.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonPlayer2.ForeColor = System.Drawing.Color.FloralWhite;
-            this.buttonPlayer2.Location = new System.Drawing.Point(419, 22);
+            this.buttonPlayer2.Location = new System.Drawing.Point(423, 22);
+            this.buttonPlayer2.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.buttonPlayer2.Name = "buttonPlayer2";
-            this.buttonPlayer2.Size = new System.Drawing.Size(100, 45);
+            this.buttonPlayer2.Size = new System.Drawing.Size(110, 45);
             this.buttonPlayer2.TabIndex = 2;
             this.buttonPlayer2.Text = "Player 2";
+            this.buttonPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPlayer2.UseVisualStyleBackColor = false;
             // 
             // buttonStart
@@ -81,7 +86,7 @@
             this.buttonStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStart.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonStart.ForeColor = System.Drawing.Color.FloralWhite;
-            this.buttonStart.Location = new System.Drawing.Point(123, 321);
+            this.buttonStart.Location = new System.Drawing.Point(127, 321);
             this.buttonStart.Margin = new System.Windows.Forms.Padding(5);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(90, 35);
@@ -98,7 +103,7 @@
             this.buttonScores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonScores.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonScores.ForeColor = System.Drawing.Color.FloralWhite;
-            this.buttonScores.Location = new System.Drawing.Point(218, 321);
+            this.buttonScores.Location = new System.Drawing.Point(222, 321);
             this.buttonScores.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.buttonScores.Name = "buttonScores";
             this.buttonScores.Size = new System.Drawing.Size(90, 35);
@@ -124,8 +129,8 @@
             this.textBoxPlayer1.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxPlayer1.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxPlayer1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPlayer1.Location = new System.Drawing.Point(38, 73);
-            this.textBoxPlayer1.Margin = new System.Windows.Forms.Padding(3, 3, 20, 3);
+            this.textBoxPlayer1.Location = new System.Drawing.Point(48, 73);
+            this.textBoxPlayer1.Margin = new System.Windows.Forms.Padding(3, 3, 14, 3);
             this.textBoxPlayer1.Name = "textBoxPlayer1";
             this.textBoxPlayer1.Size = new System.Drawing.Size(52, 32);
             this.textBoxPlayer1.TabIndex = 6;
@@ -138,8 +143,8 @@
             this.textBoxPlayer2.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxPlayer2.Font = new System.Drawing.Font("Microsoft YaHei", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxPlayer2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxPlayer2.Location = new System.Drawing.Point(436, 73);
-            this.textBoxPlayer2.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
+            this.textBoxPlayer2.Location = new System.Drawing.Point(434, 73);
+            this.textBoxPlayer2.Margin = new System.Windows.Forms.Padding(14, 3, 3, 3);
             this.textBoxPlayer2.Name = "textBoxPlayer2";
             this.textBoxPlayer2.Size = new System.Drawing.Size(52, 32);
             this.textBoxPlayer2.TabIndex = 7;
@@ -155,7 +160,7 @@
             this.buttonSignOutBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSignOutBack.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.buttonSignOutBack.ForeColor = System.Drawing.Color.FloralWhite;
-            this.buttonSignOutBack.Location = new System.Drawing.Point(313, 321);
+            this.buttonSignOutBack.Location = new System.Drawing.Point(317, 321);
             this.buttonSignOutBack.Margin = new System.Windows.Forms.Padding(5);
             this.buttonSignOutBack.Name = "buttonSignOutBack";
             this.buttonSignOutBack.Size = new System.Drawing.Size(90, 35);
@@ -170,12 +175,12 @@
             this.labelWinnerPlayer1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWinnerPlayer1.ForeColor = System.Drawing.Color.FloralWhite;
             this.labelWinnerPlayer1.Location = new System.Drawing.Point(26, 118);
-            this.labelWinnerPlayer1.Margin = new System.Windows.Forms.Padding(0, 10, 10, 0);
+            this.labelWinnerPlayer1.Margin = new System.Windows.Forms.Padding(16, 10, 10, 0);
             this.labelWinnerPlayer1.Name = "labelWinnerPlayer1";
             this.labelWinnerPlayer1.Size = new System.Drawing.Size(74, 22);
             this.labelWinnerPlayer1.TabIndex = 9;
             this.labelWinnerPlayer1.Text = "Winner!";
-            this.labelWinnerPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelWinnerPlayer1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelWinnerPlayer1.Visible = false;
             // 
             // labelWinnerPlayer2
@@ -183,23 +188,24 @@
             this.labelWinnerPlayer2.AutoSize = true;
             this.labelWinnerPlayer2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWinnerPlayer2.ForeColor = System.Drawing.Color.FloralWhite;
-            this.labelWinnerPlayer2.Location = new System.Drawing.Point(426, 118);
-            this.labelWinnerPlayer2.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.labelWinnerPlayer2.Location = new System.Drawing.Point(430, 118);
+            this.labelWinnerPlayer2.Margin = new System.Windows.Forms.Padding(10, 10, 16, 0);
             this.labelWinnerPlayer2.Name = "labelWinnerPlayer2";
             this.labelWinnerPlayer2.Size = new System.Drawing.Size(74, 22);
             this.labelWinnerPlayer2.TabIndex = 10;
             this.labelWinnerPlayer2.Text = "Winner!";
-            this.labelWinnerPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelWinnerPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelWinnerPlayer2.Visible = false;
             // 
             // ticTacToeBoardGame
             // 
             this.ticTacToeBoardGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.ticTacToeBoardGame.FieldColor = System.Drawing.Color.FloralWhite;
-            this.ticTacToeBoardGame.Location = new System.Drawing.Point(113, 22);
+            this.ticTacToeBoardGame.Location = new System.Drawing.Point(117, 22);
             this.ticTacToeBoardGame.Name = "ticTacToeBoardGame";
             this.ticTacToeBoardGame.PlayerSymbol1 = "X";
             this.ticTacToeBoardGame.PlayerSymbol2 = "O";
+            this.ticTacToeBoardGame.SinglePlayer = false;
             this.ticTacToeBoardGame.Size = new System.Drawing.Size(300, 300);
             this.ticTacToeBoardGame.TabIndex = 0;
             this.ticTacToeBoardGame.WinnerColor = System.Drawing.Color.LightCoral;
@@ -209,7 +215,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(530, 379);
+            this.ClientSize = new System.Drawing.Size(534, 379);
             this.Controls.Add(this.labelWinnerPlayer2);
             this.Controls.Add(this.labelWinnerPlayer1);
             this.Controls.Add(this.buttonSignOutBack);
@@ -221,6 +227,8 @@
             this.Controls.Add(this.buttonPlayer2);
             this.Controls.Add(this.buttonPlayer1);
             this.Controls.Add(this.ticTacToeBoardGame);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormGame";
             this.Text = "WinOXO";
             this.Load += new System.EventHandler(this.FormGame_Load);

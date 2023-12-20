@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormScores));
             this.labelPlayerName = new System.Windows.Forms.Label();
             this.textBoxWins = new System.Windows.Forms.TextBox();
             this.textBoxTies = new System.Windows.Forms.TextBox();
@@ -219,6 +220,8 @@
             this.Controls.Add(this.labelPlayerName);
             this.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.Color.FloralWhite;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "FormScores";
             this.Text = "WinOXO Your Scores";

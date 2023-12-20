@@ -91,26 +91,31 @@ namespace WinOxo
             // Display message
             MessageBox.Show("Signed up successfully!");
 
-            ReturnToLoginForm();
+            //!!
+            //ReturnToLoginForm();
+            this.Close();
+            //!!
         }
 
         /// <summary>
         /// Closes this form and shows the login form
         /// </summary>
-        private void ReturnToLoginForm()
-        {
-            this.Close();
-            formLogin.ClearForm();
-            formLogin.Show();
-        }
+        //private void ReturnToLoginForm()
+        //{
+        //    this.Close();
+        //    formLogin.ClearForm();
+        //    formLogin.Show();
+        //}
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            ReturnToLoginForm();
+            this.Close();
+            //ReturnToLoginForm();
         }
 
         private void FormRegister_FormClosing(Object sender, FormClosingEventArgs e)
         {
+            formLogin.ClearForm();
             formLogin.Show();
         }
     }

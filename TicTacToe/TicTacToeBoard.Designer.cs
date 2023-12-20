@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.field0 = new System.Windows.Forms.Button();
             this.field1 = new System.Windows.Forms.Button();
             this.field2 = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.field6 = new System.Windows.Forms.Button();
             this.field7 = new System.Windows.Forms.Button();
             this.field8 = new System.Windows.Forms.Button();
+            this.timerVirtualOpponent = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // field0
@@ -165,6 +167,11 @@
             this.field8.UseVisualStyleBackColor = false;
             this.field8.Click += new System.EventHandler(this.field8_Click);
             // 
+            // timerVirtualOpponent
+            // 
+            this.timerVirtualOpponent.Interval = 1000;
+            this.timerVirtualOpponent.Tick += new System.EventHandler(this.timerVirtualOpponent_Tick);
+            // 
             // TicTacToeBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,5 +204,6 @@
         private System.Windows.Forms.Button field6;
         private System.Windows.Forms.Button field7;
         private System.Windows.Forms.Button field8;
+        public System.Windows.Forms.Timer timerVirtualOpponent;
     }
 }
