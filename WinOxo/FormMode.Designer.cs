@@ -99,6 +99,7 @@
             this.Name = "FormMode";
             this.Padding = new System.Windows.Forms.Padding(77, 0, 77, 0);
             this.Text = "WinOxo Mode";
+            this.Load += new System.EventHandler(this.FormMode_Load);
             this.ResumeLayout(false);
 
         }

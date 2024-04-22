@@ -38,8 +38,8 @@ namespace WinOxo
         private void FormScores_Load(object sender, EventArgs e)
         {
             labelPlayerName.Text = login;
-            
-            if(GetGamesData())
+
+            if (GetGamesData())
             {
                 GetRankingData();
             }
@@ -83,7 +83,7 @@ namespace WinOxo
             // Close connection
             connection = formLogin.OpenConnection(false, connection);
 
-            return true;   
+            return true;
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace WinOxo
 
                 // Store current ratio with current player's id
                 currentDictionary.Add(currentRowId, currentRowRatio);
-                
+
                 // Add current data to the list
                 ratios.Add(currentDictionary);
             }
@@ -189,7 +189,7 @@ namespace WinOxo
         {
             // Display message
             DialogResult deleteConfirmation = MessageBox.Show("Are you sure you want to delete your account?", "Delete account confirmation", MessageBoxButtons.OKCancel);
-            
+
             if (deleteConfirmation == DialogResult.OK)
             {
                 DeleteAccount();
@@ -197,7 +197,7 @@ namespace WinOxo
             else
             {
                 return;
-            }    
+            }
         }
 
         private void DeleteAccount()
@@ -240,7 +240,7 @@ namespace WinOxo
             MessageBox.Show("Account deleted successfully!");
 
             accountDeleted = true;
-            
+
             this.Close();
             formLogin.ClearForm();
             formLogin.Show();

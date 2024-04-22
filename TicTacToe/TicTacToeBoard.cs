@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Text.RegularExpressions;
 
 namespace TicTacToe
 {
     /// <summary>
     /// Represents the tic-tac-toe game board
     /// </summary>
-    public partial class TicTacToeBoard: UserControl
+    public partial class TicTacToeBoard : UserControl
     {
         private const int BoardSize = 9;
 
@@ -31,7 +31,7 @@ namespace TicTacToe
 
         private Color fieldColor = Color.FloralWhite;
         private Color winnerColor = Color.LightCoral;
-        
+
         private Button[] buttons = new Button[BoardSize];
         private Field[] gameFields = new Field[BoardSize];
 
@@ -76,7 +76,7 @@ namespace TicTacToe
 
         public string PlayerSymbol1
         {
-            get { return playerSymbol1;  }
+            get { return playerSymbol1; }
             set { playerSymbol1 = value; }
         }
 
@@ -94,7 +94,7 @@ namespace TicTacToe
 
         public Color WinnerColor
         {
-            get { return winnerColor;  }
+            get { return winnerColor; }
             set { winnerColor = value; }
         }
 
@@ -246,7 +246,7 @@ namespace TicTacToe
             }
             OnFieldClicked(field8, currentPlayer);
         }
-        
+
         /// <summary>
         /// Handles player action on a field
         /// </summary>

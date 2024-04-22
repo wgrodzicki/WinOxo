@@ -61,5 +61,10 @@ namespace WinOxo
                 formLogin.Show();
             }
         }
+
+        private void FormMode_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

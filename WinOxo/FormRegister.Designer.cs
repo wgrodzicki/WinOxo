@@ -165,6 +165,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormRegister";
             this.Text = "WinOXO Register";
+            this.Load += new System.EventHandler(this.FormRegister_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -104,5 +104,10 @@ namespace WinOxo
             formLogin.ClearForm();
             formLogin.Show();
         }
+
+        private void FormRegister_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
